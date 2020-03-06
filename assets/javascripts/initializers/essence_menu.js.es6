@@ -6,9 +6,9 @@ function initialize(api) {
   Discourse.NavItem.reopenClass({
     buildList : function(category, args) {
       var list = this._super(category, args);
-      if(category && category.name == "Formations") {
-        list.push(Discourse.ExternalNavItem.create({href: '/t/liste-2-0-des-formations-sur-lautosuffisance-et-la-consommation-ecoresponsable-en-2018/306', name: 'Liste'}));
-      }
+     
+        list.push(Discourse.ExternalNavItem.create({href: '/t/liste-2-0-des-formations-sur-lautosuffisance-et-la-consommation-ecoresponsable-en-2018/306', name: 'essence'}));
+      
       return list;
     }
   });
