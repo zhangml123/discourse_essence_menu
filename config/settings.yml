@@ -21,6 +21,6 @@ basic:
      - essence
 
 plugins:
-  discourse_essence_menu:
+  discourse_essence:
     default: true
     client: true

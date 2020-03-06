@@ -4,7 +4,7 @@
 # authors: null
 # url: https://github.com/zhangml123/discourse_essence_menu
 
-enabled_site_setting :discourse_essence_menu
+enabled_site_setting :discourse_essence
 
 
 
