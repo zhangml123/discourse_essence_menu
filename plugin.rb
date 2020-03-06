@@ -29,11 +29,11 @@ after_initialize do
   end
   DiscourseEssence::Engine.routes.draw do
     get "/test.json" => "essence#test"
-    get "/essence" => "essence#index"
+   
   end
 
   Discourse::Application.routes.append do
-    mount ::DiscourseEssence::Engine, at: "/"
+    mount ::DiscourseEssence::Engine, at: "/essence"
   end
 end
 
