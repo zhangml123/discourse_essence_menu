@@ -26,7 +26,7 @@ after_initialize do
   end
   DiscourseEssence::Engine.routes.draw do
     get "/test.json" => "essence#test"
-   
+    get "/" => "essence#index", constraints: DiscourseEssenceConstraint.new
   end
 
   Discourse::Application.routes.append do
@@ -34,3 +34,8 @@ after_initialize do
   end
 end
 
+class DiscourseEssenceConstraint
+  def matches?(request)
+    SiteSetting.discourse_essence_menu
+  end
+end
