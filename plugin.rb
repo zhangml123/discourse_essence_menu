@@ -5,7 +5,7 @@
 # url: https://github.com/zhangml123/discourse_essence_menu
 
 
-register_asset "javascripts/essence.js.es6"
+
 
 
 

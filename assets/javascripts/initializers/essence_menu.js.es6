@@ -2,8 +2,10 @@ import { withPluginApi } from "discourse/lib/plugin-api";
 import { h } from "virtual-dom";
 import { ajax } from "discourse/lib/ajax";
 function initialize(api) {
+
+
 	alert("essence_menu.js")
-  Discourse.ExternalNavItem = Discourse.NavItem.extend({
+/*  Discourse.ExternalNavItem = Discourse.NavItem.extend({
     href : function() {
       return this.get('href');
     }.property('href')
@@ -24,11 +26,11 @@ function initialize(api) {
   });
 
 
-}
+}*/
 
 
 export default {
-  name: "theme",
+  name: "essence_menu",
   initialize() {
     withPluginApi("0.8.7", initialize);
   }
