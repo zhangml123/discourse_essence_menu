@@ -1,7 +1,7 @@
-export default function() {
-	alert("essence-map.js")
-  	this.route('essence',function(){
-  		this.route("test",{path: '/'});
-  	});
-}
-
+export default function(){
+  this.route('enssence', function(){
+    this.route('hello', {path: '/hello' }, function(){
+      this.route('show', {path: '/'});
+    });
+  });
+};
