@@ -6,9 +6,6 @@
 
 
 
-register_asset "javascripts/test.js.es6"
-register_asset "javascripts/test1.js"
-
 enabled_site_setting :discourse_essence_menu
 after_initialize do
 
