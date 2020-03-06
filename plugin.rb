@@ -5,7 +5,7 @@
 # url: https://github.com/zhangml123/discourse_essence_menu
 
 
-register_asset "javascripts/routes/essence-map.js.es6"
+register_asset "javascripts/routes/essence-route-map.js.es6"
 register_asset "javascripts/routes/essence.js.es6"
 enabled_site_setting :discourse_essence_menu
 after_initialize do
