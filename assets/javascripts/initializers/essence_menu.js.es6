@@ -2,13 +2,23 @@ import { withPluginApi } from "discourse/lib/plugin-api";
 import { h } from "virtual-dom";
 import { ajax } from "discourse/lib/ajax";
 function initialize(api) {
-	
+	alert("essence_menu.js")
+  Discourse.ExternalNavItem = Discourse.NavItem.extend({
+    href : function() {
+      return this.get('href');
+    }.property('href')
+  });
+
+  I18n.translations.en.js.filters.bugs = { title: "Bugs", help: "Open Bugs" };
+  I18n.translations.en.js.filters.google = { title: "Google", help: "Navigate to Google" };
+
   Discourse.NavItem.reopenClass({
     buildList : function(category, args) {
       var list = this._super(category, args);
-     
-        list.push(Discourse.ExternalNavItem.create({href: '/t/liste-2-0-des-formations-sur-lautosuffisance-et-la-consommation-ecoresponsable-en-2018/306', name: 'essence'}));
-      
+      if(category && category.name == "Travel") {
+        list.push(Discourse.ExternalNavItem.create({href: '/category/bug', name: 'bugs'}));
+        list.push(Discourse.ExternalNavItem.create({href: 'https://google.com', name: 'google'}));
+      }
       return list;
     }
   });

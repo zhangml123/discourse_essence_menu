@@ -1,5 +1,5 @@
 (function(){
-
+  alert("essence.js")
   Discourse.ExternalNavItem = Discourse.NavItem.extend({
     href : function() {
       return this.get('href');
