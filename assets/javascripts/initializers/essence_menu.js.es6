@@ -1,8 +1,7 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
-import { h } from "virtual-dom";
-import { ajax } from "discourse/lib/ajax";
+
 function initialize(api) {
-	alert("test2")
+	alert("test3")
 
 	api.addNavigationBarItem({
       name: "essence",
