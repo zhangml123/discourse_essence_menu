@@ -15,5 +15,7 @@ export default {
   	alert("test11111")
     app.unregister("router:main");
     app.register("router:main", mapRoutes());
+
+    console.log(app)
   }
 };
