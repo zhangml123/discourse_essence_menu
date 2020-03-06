@@ -27,6 +27,7 @@ after_initialize do
   DiscourseEssence::Engine.routes.draw do
     get "/test.json" => "essence#test"
     get "/" => "essence#index", constraints: DiscourseEssenceConstraint.new
+    get "/hello" => "essence#index", constraints: DiscourseEssenceConstraint.new
   end
 
   Discourse::Application.routes.append do
