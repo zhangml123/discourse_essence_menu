@@ -22,9 +22,14 @@ after_initialize do
     def index
       render json:{"status": "worked"}
     end
+
+    def test
+      render json:{"status": "test"}
+    end
   end
   DiscourseEssence::Engine.routes.draw do
-    get "/test.json" => "essence#index"
+    get "/test.json" => "essence#test"
+    get "/essence" => "essence#index"
   end
 
   Discourse::Application.routes.append do
