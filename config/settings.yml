@@ -1,0 +1,21 @@
+basic:
+  top_menu:
+    client: true
+    refresh: true
+    type: list
+    list_type: compact
+    default: "latest|new|unread|top|categories|essence"
+    regex: "latest"
+    regex_error: "site_settings.errors.must_include_latest"
+    validator: RegexPresenceValidator
+    allow_any: false
+    choices:
+     - latest
+     - new
+     - unread
+     - top
+     - categories
+     - read
+     - posted
+     - bookmarks  
+     - essence
