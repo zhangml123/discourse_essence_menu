@@ -1,0 +1,9 @@
+# encoding: utf-8
+#
+
+en:
+  js:
+    filters:
+      essence:
+        title: "essence"
+        help: "the essence of post"
