@@ -24,9 +24,9 @@ function initialize(api) {
       return list;
     }
   });
+*/
 
-
-}*/
+}
 
 
 export default {
