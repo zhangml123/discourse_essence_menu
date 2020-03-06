@@ -7,7 +7,31 @@
 
 register_asset "javascripts/discourse/routes/essence-map.js.es6"
 register_asset "javascripts/discourse/routes/essence.js.es6"
+register_asset "javascripts/test.js.es6"
+register_asset "javascripts/test1.js"
 
+enabled_site_setting :discourse_essence_menu
+after_initialize do
 
+  module ::DiscourseEssence
+    class Engine < ::Rails::Engine
+      engine_name "discourse_essence"
+      isolate_namespace DiscourseEssence
+    end
+  end	
+  require_dependency "application_controller"
+  class DiscourseEssence::EssenceController < ::ApplicationController
+  	skip_before_action :check_xhr, only: [:index]
+    def index
+      render json:{"status": "worked"}
+    end
+  end
+  DiscourseEssence::Engine.routes.draw do
+    get "/test.json" => "essence#index"
+  end
 
+  Discourse::Application.routes.append do
+    mount ::DiscourseEssence::Engine, at: "/"
+  end
+end
 

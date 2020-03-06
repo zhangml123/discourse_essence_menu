@@ -19,3 +19,8 @@ basic:
      - posted
      - bookmarks  
      - essence
+
+plugins:
+  discourse_essence_menu:
+    default: true
+    client: true
