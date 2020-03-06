@@ -5,7 +5,7 @@ module DiscourseEssence
     config.after_initialize do
 
       Discourse::Application.routes.append do
-        mount ::DiscourseEssemce::Engine, at: "/essence"
+        mount ::DiscourseEssence::Engine, at: "/essence"
       end
     end
 
