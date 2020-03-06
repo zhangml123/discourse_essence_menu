@@ -1,7 +1,7 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 
 function initialize(api) {
-	alert("test3")
+	alert("test5")
 
 	api.addNavigationBarItem({
       name: "essence",
