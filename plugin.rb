@@ -17,7 +17,7 @@ after_initialize do
   class DiscourseEssence::EssenceController < ::ApplicationController
   	skip_before_action :check_xhr, only: [:index]
     def index
-      render json:{"status": "worked"}
+      render_json_dump("Hello World")
     end
 
     def test
