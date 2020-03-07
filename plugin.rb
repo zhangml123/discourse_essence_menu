@@ -6,6 +6,9 @@
 
 enabled_site_setting :discourse_essence
 
-
+Discourse.top_menu_items.push(:essence)
+Discourse.anonymous_top_menu_items.push(:essence)
+Discourse.filters.push(:essence)
+Discourse.anonymous_filters.push(:essence) 
 
 load File.expand_path('../lib/discourse-essence/engine.rb', __FILE__)
