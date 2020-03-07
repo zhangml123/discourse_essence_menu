@@ -5,5 +5,10 @@ en:
   js:
     filters:
       essence:
-        title: "essence"
-        help: "the essence of post"
+        title: "精华"
+        help: "精华主题"
+    topics:
+      none:
+        essence: "没有精华主题"
+      bottom:
+        essence: "没有更多的精华主题" 
