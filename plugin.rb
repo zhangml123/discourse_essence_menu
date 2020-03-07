@@ -18,7 +18,7 @@ class ::TopicQuery
   def list_essence
     @options[:order] = "essence"
     #topics = create_list(:essence, ascending: "true")
-    create_list(:new, { unordered: true }, new_results);
+    create_list(:essence, { unordered: true }, new_results);
   end
 end   
 
