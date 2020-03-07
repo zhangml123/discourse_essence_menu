@@ -19,7 +19,7 @@ class ::TopicQuery
     @options[:order] = "essence"
     #topics = create_list(:essence, ascending: "true")
     topics = create_list(:essence, unordered: true) do |topics|
-      topics.where('tu.pinned_globally IS NOT NULL OR pinned_until > now()').order('tu.pinned_at DESC')
+      topics.where('pinned_globally IS NOT NULL OR pinned_until > now()').order('pinned_at DESC')
     end
   end
 end   
