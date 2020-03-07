@@ -1,13 +1,13 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 
 function initialize(api) {
-	alert("test6")
+	/*alert("test6")
 
 	api.addNavigationBarItem({
       name: "essence",
       displayName: "essence",
       href: "https://www.discourse.org",
-    })
+    })*/
 }
 
 
