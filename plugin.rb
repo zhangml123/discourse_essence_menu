@@ -15,7 +15,7 @@ require_dependency 'topic_query'
 class ::TopicQuery
   SORTABLE_MAPPING["essence"] = "custom_fields.event_start"
 
-  def list_agenda
+  def list_essence
     @options[:order] = "essence"
     topics = create_list(:essence, ascending: "true")
   end
