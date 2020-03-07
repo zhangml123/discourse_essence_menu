@@ -18,8 +18,8 @@ class ::TopicQuery
   def list_essence
     @options[:order] = "essence"
     #topics = create_list(:essence, ascending: "true")
-    topics = create_list(:read, unordered: true) do |topics|
-      topics.where('tu.last_visited_at IS NOT NULL').order('tu.last_visited_at DESC')
+    topics = create_list(:essence, unordered: true) do |topics|
+      topics.where('tu.pinned_globally IS NOT NULL OR pinned_until > now()').order('tu.pinned_at DESC')
     end
   end
 end   
