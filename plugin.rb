@@ -21,8 +21,8 @@ class ::TopicQuery
     #topics = create_list(:essence, unordered: false) do |topics|
      # topics.where('pinned_globally IS NOT NULL OR pinned_until > now()').order('pinned_at DESC')
     #end
-    #topics = create_list(:essence) { |l| l.where('pinned_globally IS NOT NULL OR pinned_until > now()').order('pinned_at DESC') }
-    topics = create_list(:essence) { |l| l.where('tu.bookmarked') }
+    topics = create_list(:essence) { |l| l.where('pinned_globally IS NOT NULL OR pinned_until > now()').order('pinned_at DESC') }
+    #topics = create_list(:essence) { |l| l.where('tu.bookmarked') }
   end
 end   
 
