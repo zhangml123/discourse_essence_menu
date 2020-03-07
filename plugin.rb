@@ -22,7 +22,7 @@ class ::TopicQuery
      # topics.where('pinned_globally IS NOT NULL OR pinned_until > now()').order('pinned_at DESC')
     #end
     #topics = create_list(:essence) { |l| l.where('pinned_globally IS NOT NULL OR pinned_until > now()').order('pinned_at DESC') }
-    topics = create_list(:essence) { |l| l.where('topics.pinned_globally OR pinned_until > now()').order('pinned_at DESC') }
+    topics = create_list(:essence) { |l| l.where('topics.pinned_globally OR topics.pinned_until > now()').order('topics.pinned_at DESC') }
   end
 end   
 
