@@ -19,6 +19,11 @@ basic:
      - posted
      - bookmarks  
      - essence
+
+posting:
+  post_edit_time_limit:
+    default: 1440
+    max: 14400
 plugins:
   discourse_essence:
     default: true
